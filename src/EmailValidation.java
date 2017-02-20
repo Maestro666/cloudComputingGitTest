@@ -23,8 +23,8 @@ public class EmailValidation {
     }
 
     private static boolean isValidEmail(String email) {
-        String s = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
-        Pattern emailPattern = Pattern.compile(s);
+        String str = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+        Pattern emailPattern = Pattern.compile(str);
         Matcher m = emailPattern.matcher(email);
         return m.matches();
     }
