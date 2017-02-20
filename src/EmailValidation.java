@@ -10,7 +10,7 @@ public class EmailValidation {
 
     public static void main(String args[]) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter email id : ");
+        System.out.print("Enter email : ");
         String email = br.readLine();
         boolean result = isValidEmail(email);
         if (result) {
@@ -22,7 +22,7 @@ public class EmailValidation {
 
     }
 
-    public static boolean isValidEmail(String email) {
+    private static boolean isValidEmail(String email) {
         String s = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
         Pattern emailPattern = Pattern.compile(s);
         Matcher m = emailPattern.matcher(email);
