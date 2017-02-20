@@ -13,7 +13,7 @@ public class EmailValidation {
         System.out.print("Enter email : ");
         String email = br.readLine();
         boolean result = isValidEmail(email);
-        if (result) {
+        if (result == true) {
             System.out.print(email + " is valid email address.");
         } else {
             System.out.print(email + " is not a valid email address.");
